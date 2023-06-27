@@ -2,9 +2,13 @@ package com.kanbantool.demo.domain;
 
 import java.util.Date;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import jakarta.persistence.*;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Project {
@@ -12,13 +16,21 @@ public class Project {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	@NotBlank(message = "Project name is required") 
 	private String projectName;
+	@NotBlank(message = "Project identifer required")
+	@Size(min = 4, max = 5, message = "Please use 4 to 5 characters")
+	@ Column(updatable = false, unique = true)
 	private String projectIdentifer;
+	@NotBlank(message = "Description is required")
 	private String description;
+	@JsonFormat(pattern = "dd-mm-yy")
 	private Date start_date;
+	@JsonFormat(pattern = "dd-mm-yy")
 	private Date end_date;
-	
+	@JsonFormat(pattern = "dd-mm-yy")
 	private Date created_At;
+	@JsonFormat(pattern = "dd-mm-yy")
 	private Date updated_At;
 	
 	public Project() {
