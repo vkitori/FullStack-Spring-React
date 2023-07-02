@@ -4,6 +4,7 @@ import java.util.Date;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -20,7 +21,7 @@ public class Project {
 	private String projectName;
 	@NotBlank(message = "Project identifer required")
 	@Size(min = 4, max = 5, message = "Please use 4 to 5 characters")
-	@ Column(updatable = false, unique = true)
+	@Column(updatable = false, unique = true)
 	private String projectIdentifer;
 	@NotBlank(message = "Description is required")
 	private String description;
