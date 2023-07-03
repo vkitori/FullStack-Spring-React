@@ -1,0 +1,5 @@
+package com.kanbantool.demo.exceptions;
+
+public class CustomResponseEntityExceptionHandler {
+
+}

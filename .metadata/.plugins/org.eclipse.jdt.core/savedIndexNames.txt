@@ -49,7 +49,6 @@ INDEX VERSION 1.132+D:\Study\Programming\Udemy\eclipseproject\.metadata\.plugins
 3897745625.index
 2058888047.index
 1076707974.index
-3435648363.index
 1766725332.index
 449793224.index
 3547398461.index

@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.kanbantool.demo.domain.Project;
 import com.kanbantool.demo.repositories.ProjectRepository;
+import com.kanbantool.demo.exceptions.ProjectIdException;
 
 @Service
 public class ProjectService {
@@ -14,8 +15,11 @@ public class ProjectService {
 	
 	public Project saveOrUpdateProject(Project project) {
 		
-		//logic
-		
-		return projectRepository.save(project);
+		try {
+			project.setProjectIdentifer(project.getProjectIdentifer().toUpperCase());
+			return projectRepository.save(project);
+		}catch (Exception e) {
+			throw new ProjectIdException("Project ID "+ project.getProjectIdentifer().toUpperCase() + "already exists");
+		}
 	}
 }
