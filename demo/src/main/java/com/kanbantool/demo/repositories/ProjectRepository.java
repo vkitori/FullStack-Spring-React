@@ -8,7 +8,7 @@ import com.kanbantool.demo.domain.Project;
 @Repository
 public interface ProjectRepository extends CrudRepository <Project, Long>{
 
-	Project findByProjectIdentifer(String projectId);
+	Project findByProjectIdentifier(String projectId);
 
 	@Override
 	Iterable<Project> findAll();

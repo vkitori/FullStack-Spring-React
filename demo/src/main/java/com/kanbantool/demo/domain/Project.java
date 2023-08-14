@@ -22,7 +22,7 @@ public class Project {
 	@NotBlank(message = "Project identifer required")
 	@Size(min = 4, max = 5, message = "Please use 4 to 5 characters")
 	@Column(updatable = false, unique = true)
-	private String projectIdentifer;
+	private String projectIdentifier;
 	@NotBlank(message = "Description is required")
 	private String description;
 	@JsonFormat(pattern = "dd-mm-yy")
@@ -54,12 +54,12 @@ public class Project {
 		this.projectName = projectName;
 	}
 
-	public String getProjectIdentifer() {
-		return projectIdentifer;
+	public String getProjectIdentifier() {
+		return projectIdentifier;
 	}
 
-	public void setProjectIdentifer(String projectIdentifer) {
-		this.projectIdentifer = projectIdentifer;
+	public void setProjectIdentifier(String projectIdentifer) {
+		this.projectIdentifier = projectIdentifer;
 	}
 
 	public String getDescription() {

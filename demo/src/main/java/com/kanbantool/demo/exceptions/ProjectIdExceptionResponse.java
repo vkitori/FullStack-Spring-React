@@ -1,18 +1,18 @@
 package com.kanbantool.demo.exceptions;
 
 public class ProjectIdExceptionResponse {
-	private String projectIdentifer;
+	private String projectIdentifier;
 
 	public ProjectIdExceptionResponse(String projectIdentifer) {
-		this.projectIdentifer = projectIdentifer;
+		this.projectIdentifier = projectIdentifer;
 	}
 
 	public String getProjectIdentifer() {
-		return projectIdentifer;
+		return projectIdentifier;
 	}
 
 	public void setProjectIdentifer(String projectIdentifer) {
-		this.projectIdentifer = projectIdentifer;
+		this.projectIdentifier = projectIdentifer;
 	}
 	
 	
