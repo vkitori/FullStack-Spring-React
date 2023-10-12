@@ -1,5 +1,0 @@
-package com.kanbantool.demo.exceptions;
-
-public class ProjectIdExceptionResponse {
-
-}

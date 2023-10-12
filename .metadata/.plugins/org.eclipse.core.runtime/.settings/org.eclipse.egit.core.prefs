@@ -1,5 +1,6 @@
-GitRepositoriesView.GitDirectories=
-GitRepositoriesView.GitDirectories.relative=
+GitRepositoriesView.GitDirectories=D\:\\Study\\Programming\\Udemy\\eclipseproject\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;
+RepositorySearchDialogSearchPath=D\:\\Study\\Programming\\Udemy\\eclipseproject\\.git
 core_autoIgnoreDerivedResources=false
 core_defaultRepositoryDir=D\:\\Study\\Programming\\Udemy\\eclipseproject\\.git
 core_git_servers=
