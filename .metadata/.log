@@ -2177,3 +2177,6 @@ org.eclipse.jgit.errors.TransportException: https://github.com/vkitori/FullStack
 
 !ENTRY org.eclipse.egit.ui 4 0 2023-10-12 21:30:17.532
 !MESSAGE Can't connect to any repository: https://github.com/vkitori/FullStack-Spring-React.git (https://github.com/vkitori/FullStack-Spring-React.git: not authorized)
+
+!ENTRY org.eclipse.core.resources 2 10035 2023-10-12 22:47:59.428
+!MESSAGE The workspace will exit with unsaved changes in this session.
