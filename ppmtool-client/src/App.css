@@ -60,6 +60,11 @@ img {
   height: 40px;
 }
 
+.form-control{
+  margin-bottom: 10px;
+}
+
 .form-control::placeholder {
   color: #bbb !important;
 }
+
