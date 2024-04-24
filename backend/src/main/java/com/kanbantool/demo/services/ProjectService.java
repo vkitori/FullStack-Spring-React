@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kanbantool.demo.domain.Project;
+import com.kanbantool.demo.domain.Backlog;
 import com.kanbantool.demo.repositories.ProjectRepository;
 import com.kanbantool.demo.exceptions.ProjectIdException;
 
@@ -16,6 +17,14 @@ public class ProjectService {
 	public Project saveOrUpdateProject(Project project) {
 		try {
 			project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
+			if(project.getId() == null) {
+				Backlog backlog = new Backlog();
+				project.setBacklog(backlog);
+				backlog.setProject(project);
+				backlog.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
+			}
+			
+			
 			return projectRepository.save(project);
 		} catch (Exception e) {
 			throw new ProjectIdException("Project ID "+ project.getProjectIdentifier().toUpperCase() + " already exists");
